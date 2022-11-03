@@ -1,0 +1,31 @@
+// $primary:;
+// $secondary:;
+
+$container: 1280;
+
+$laptop: 1024px;
+$bigTablet: 992;
+$tablet: 767;
+$bigPhone: 425;
+$mediumPhone: 375;
+$smallPhone: 320;
+
+@mixin adaptive-value($value, $computerSize, $mobileSize) {
+   $addSize: $computerSize - $mobileSize;
+   $maxWidth: $container - 320;
+   #{$value}: calc(#{$mobileSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+@mixin adaptive-value-tablet($value, $computerSize, $mobileSize) {
+   $addSize: $computerSize - $mobileSize;
+   $maxWidth: $container - 767;
+   #{$value}: calc(#{$mobileSize + px} + #{$addSize} * ((100vw - 767px) / #{$maxWidth}));
+}
+
+@mixin adaptive-manual($value, $computerSize, $mobileSize, $smallMaxWidth) {
+   $addSize: $computerSize - $mobileSize;
+   $maxWidth: $container - $smallMaxWidth;
+   #{$value}: calc(#{$mobileSize + px} + #{$addSize} * ((100vw - #{$smallMaxWidth+px}) / #{$maxWidth}));
+}
+
+// font-size: calc(24px + 16 * ((100vw - 320px) / (1280 - 320))); CSS
