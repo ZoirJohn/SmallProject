@@ -28,4 +28,9 @@ $smallPhone: 320;
    #{$value}: calc(#{$mobileSize + px} + #{$addSize} * ((100vw - #{$smallMaxWidth+px}) / #{$maxWidth}));
 }
 
+@mixin flex($y,$x) {
+	display: flex;
+	align-items: $y;
+	justify-content: $x;
+}
 // font-size: calc(24px + 16 * ((100vw - 320px) / (1280 - 320))); CSS
