@@ -20,7 +20,7 @@
       height: 100%;
       list-style-type: none;
       @include flex(center, space-between);
-      @include adaptive-value-tablet(gap, 48, 20);
+      @include adaptive-value-tablet(gap, 42, 20);
       flex-wrap: wrap;
       li {
          font-weight: 200;

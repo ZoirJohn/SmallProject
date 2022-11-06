@@ -1,0 +1,95 @@
+.main {
+   padding-top: 97px;
+   @media (max-width: ($tablet+px)) {
+      padding-top: 40px;
+   }
+}
+.notary {
+   &__container {
+      padding-top: 10em;
+      padding-bottom: 10em;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__header {
+      width: 50%;
+      h1 {
+         font-size: (110/16) + rem;
+         background: linear-gradient(180deg, #008124 0%, #000000 100%);
+         background-clip: text;
+         color: transparent;
+         font-family: 'Raleway';
+         font-weight: 200;
+         text-transform: uppercase;
+         padding: 0 0 3rem 0;
+      }
+   }
+
+   &__description {
+      display: flex;
+      h3 {
+         font-family: 'Raleway';
+         font-weight: 200;
+         font-size: 1.25rem;
+         line-height: 150%;
+         color: #000000;
+      }
+   }
+
+   &__compass {
+      flex: 0 0 120px;
+      height: 120px;
+   }
+
+   &__bargains {
+      display: flex;
+      gap: 0 1.25em;
+   }
+
+   &__card {
+      width: 305px;
+      height: 365px;
+		display: flex;
+		align-items: center;
+      flex-direction: column;
+   }
+}
+
+.card-notary {
+   padding: (42/16) + em 0;
+   border: 1px solid $primary;
+   &__header {
+      font-family: 'Raleway';
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 28px;
+      text-transform: uppercase;
+      color: #0c0c0c;
+      padding: 0 0 1em;
+   }
+
+   &__duration {
+      font-size: (15/16) + rem;
+      padding: 0 0 (48/15)+em 0;
+   }
+
+   &__price {
+      padding: 0 0 (24/64)+em 0;
+      font-family: 'Raleway';
+      font-weight: 400;
+      font-size: 64px;
+      line-height: 75px;
+      color: #0c0c0c;
+   }
+
+   &__descrption {
+      text-align: center;
+		font-size: 1rem;
+      width: 80%;
+		padding: 0 0 (40/16)+em 0;
+   }
+
+   &__number {
+   }
+}
