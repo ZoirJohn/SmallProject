@@ -20,6 +20,9 @@ body,
    font-family: 'Manrope';
 	font-weight: 200;
 }
+body.active_{
+	overflow: hidden;
+}
 .wrapper {
    min-height: 100vh;
    display: flex;
@@ -37,7 +40,7 @@ body,
    width: 8px;
 }
 ::-webkit-scrollbar-thumb {
-   background: #00000011;
+   background: $primary;
    border-radius: 50px;
 }
 header {

@@ -11,3 +11,12 @@
 //       .classList.add('p');
 //    }
 // }
+
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.nav');
+const burgerFunction = () => {
+   burger.classList.toggle('active_');
+   nav.classList.toggle('active_');
+	nav.closest('body').classList.toggle('active_')
+};
+burger.addEventListener('click', burgerFunction);
