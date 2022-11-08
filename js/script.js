@@ -17,6 +17,15 @@ const nav = document.querySelector('.nav');
 const burgerFunction = () => {
    burger.classList.toggle('active_');
    nav.classList.toggle('active_');
-	nav.closest('body').classList.toggle('active_')
+   nav.closest('body').classList.toggle('active_');
 };
 burger.addEventListener('click', burgerFunction);
+
+const text = document.querySelector('.notary__compass p');
+let jsText = text.innerHTML.split('');
+jsText.splice(11, 4);
+text.innerHTML = jsText
+   .map((letter, index) => {
+      return `<span style='transform: rotate(${7 * index}deg);'>${letter}</span>`;
+   })
+   .join('');

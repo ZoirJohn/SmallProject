@@ -28,6 +28,9 @@
    }
    a {
       white-space: nowrap;
+		&:hover{
+			text-decoration: underline;
+		}
    }
 	&::before{
 		content: '';
