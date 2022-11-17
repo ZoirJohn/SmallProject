@@ -13,7 +13,6 @@
       display: flex;
       justify-content: space-between;
    }
-
    &__header {
       width: 45%;
       h1 {
@@ -27,9 +26,9 @@
          padding: 0 0 3rem 0;
       }
    }
-
    &__description {
       display: flex;
+      gap: 0 3em;
       h3 {
          font-family: 'Raleway';
          font-weight: 200;
@@ -38,7 +37,6 @@
          color: #000000;
       }
    }
-
    &__compass {
       position: relative;
       flex: 0 0 120px;
@@ -54,17 +52,15 @@
          top: 0;
          left: 50%;
          transform-origin: 0 60px;
-			font-size: 0.625rem;
-			color: $primary;
-			text-transform: uppercase;
+         font-size: 0.625rem;
+         color: $primary;
+         text-transform: uppercase;
       }
    }
-
    &__bargains {
       display: flex;
       gap: 0 1.25em;
    }
-
    &__card {
       width: 305px;
       height: 365px;
@@ -77,12 +73,58 @@
          font-size: 110px;
       }
    }
+   @media (max-width: ($container+px)) {
+      &__container {
+         flex-direction: column;
+         align-items: center;
+         gap: 3em 0;
+         padding-top: 5em;
+      }
+      &__header {
+         width: 60%;
+      }
+      &__description {
+         align-items: center;
+      }
+   }
+   @media (max-width: ($tablet+px)) {
+      &__header {
+         width: 80%;
+         h1 {
+            font-size: 5rem ;
+         }
+      }
+   }
+   @media (max-width: 640px) {
+      &__bargains {
+         gap: 0 0.2em;
+      }
+   }
+   @media (max-width: 620px) {
+      &__header {
+         width: 96%;
+			h1{
+				font-size: 4rem;
+			}
+      }
+      &__description {
+         gap: 0.5em;
+         h3 {
+            font-size: 1rem;
+         }
+      }
+      &__bargains {
+         flex-direction: column;
+         gap: 2em 0;
+      }
+   }
 }
 
 .card-notary {
    padding: (28/16) + em 0 0;
    border: 1px solid $secondary;
    border-radius: 1em;
+
    &__header {
       font-family: 'Raleway';
       font-weight: 700;

@@ -23,9 +23,11 @@ burger.addEventListener('click', burgerFunction);
 
 const text = document.querySelector('.notary__compass p');
 let jsText = text.innerHTML.split('');
+jsText.splice(32, 6 );
 jsText.splice(11, 4);
 text.innerHTML = jsText
    .map((letter, index) => {
-      return `<span style='transform: rotate(${7 * index}deg);'>${letter}</span>`;
+      return `<span style='transform: rotate(${8.5 * index}deg);'>${letter}</span>`;
    })
    .join('');
+console.log(document.documentElement.clientWidth);
