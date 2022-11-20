@@ -79,6 +79,7 @@
          align-items: center;
          gap: 3em 0;
          padding-top: 5em;
+         padding-bottom: 5em;
       }
       &__header {
          width: 60%;
@@ -118,6 +119,22 @@
          gap: 2em 0;
       }
    }
+	@media (max-width: ($mediumPhone+px)) {
+		&__container{
+			padding-top: 2.5em;
+			padding-bottom: 2.5em;
+		}
+		h1{
+			font-size: 3rem;
+		}
+		&__compass{
+			flex: 0 0 100px;
+			height: 100px;
+			span{
+				transform-origin: 0 50px;
+			}
+		}
+	}
 }
 
 .card-notary {
