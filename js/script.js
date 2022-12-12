@@ -14,10 +14,13 @@
 
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('.nav');
-const burgerFunction = () => {
+
+
+const burgerFunction = (e) => {
+	e.preventDefault()
    burger.classList.toggle('active_');
    nav.classList.toggle('active_');
-   nav.closest('body').classList.toggle('active_');
+   nav.closest('body').classList.toggle('lock_');
 };
 burger.addEventListener('click', burgerFunction);
 

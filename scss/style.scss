@@ -17,11 +17,11 @@ body {
    font-weight: 200;
    font-size: 16px;
 }
-body.active_ {
-   overflow: hidden;
+body.lock_ {
+   overflow: hidden;	
 }
 .wrapper {
-   min-height: 100vh;
+   // min-height: 100vh;
    display: flex;
    flex-direction: column;
 }
